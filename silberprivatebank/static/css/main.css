@@ -1,0 +1,192 @@
+
+.lato-thin {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .lato-light {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .lato-black {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .lato-thin-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .lato-light-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .lato-regular-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .lato-bold-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .lato-black-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+
+      #navheader{
+          box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.03);
+      }
+      .nav-link{
+          color: #000!important;
+          font-weight: 400;
+      }
+      ._btn:hover{
+          cursor: pointer;
+          background-color: rgb(17, 66, 156);
+      }
+      .primary_btn{
+          background: rgba(26, 64, 136, 1);
+          text-align: center;
+          min-height: 40px!important;
+          color: #fff !important;
+          padding: 6px 27px 0px 27px;
+          border-radius: 30px;
+          margin: 5px 5px 0 0;
+          text-decoration: none;
+          display: inline-flex;
+      }
+      .primary_outlined_btn{
+          color: rgba(26, 64, 136, 1)!important;
+          border: 1px solid rgba(26, 64, 136, 1);
+          background-color: #fff;
+          text-align: center;
+          padding: 6px 27px 0px 27px;
+          text-decoration: none;
+          border-radius: 30px;
+          min-height: 40px!important;
+          margin: 5px 0;
+          display: inline-flex;
+      }
+      .primary_outlined_btn:hover{
+          color: #fff!important
+      }
+      
+  .box_shadow{
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.03);
+  }
+
+      /* <!-- footer menu --> */
+          footer {
+          background-color: #000; /* Set background color to black */
+          color: #fff; /* Set text color to white */
+          padding: 80px 20px 0 0;
+          }
+          /* Style for the logo */
+          .footer-logo {
+          height: 50px;
+          width: auto;
+          margin-bottom: 20px;
+          }
+          /* Style for the menu */
+          .footer-menu {
+          list-style-type: none;
+          padding: 0;
+          margin-bottom: 20px;
+          }
+          .footer-menu li {
+          display: inline-block;
+          margin-right: 10px;
+          }
+          .footer-menu li:last-child {
+          margin-right: 0;
+          }
+          .footer-menu li a {
+          color: #fff; /* Set menu item color to white */
+          text-decoration: none;
+          }
+          .footer-menu li a:hover {
+          color: #007bff;
+          }
+          /* Style for the disclaimer */
+          .footer-disclaimer {
+          font-size: 12px;
+          color: #ccc; /* Set disclaimer text color to light gray */
+          text-align: left; /* Align disclaimer text to left */
+          }
+          .submenu {
+          display: flex;
+          flex-direction: column; /* Hide the submenu by default */
+          list-style: none;
+          padding: 0;
+          margin: 0; /* Remove default list styles */
+      }
+  
+      .submenu li {
+          margin: 0;
+          padding: 0;
+          height: 30px;
+          font-size: 14px;
+      }
+  
+      .footer-menu li:hover .submenu {
+          color: #f0f0f0;
+      }
+      /* .footer-menu li h6{
+          margin-bottom: 80px;
+      } */
+  
+      .footer-menu .footerheading{
+          margin-bottom: 30px;
+          text-decoration: none;
+          color: #fff;
+      }
+      .footer-menu .footerheading a{
+          text-decoration: none;
+          color: #fff;
+      }
+      .social_menu{
+          display: flex;
+          flex-direction: row; /* Hide the submenu by default */
+          list-style: none;
+          padding: 0;
+          margin: 0; 
+      }
+      .border_bottom{
+          text-align: center;
+          padding: 10px 0;
+          border-top: 2px solid rgba(26, 64, 136, 1)
+      }
+      .divider{
+        border:1px solid rgba(26, 64, 136, 1);
+        width: 100px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 15px;
+      }
+     

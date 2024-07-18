@@ -1,0 +1,105 @@
+#herosection {
+    position: relative;
+    width: 100%;
+    height: 600px; 
+    background-image: url('/static/images/banner/financing_bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    color: #000;
+}
+.overlay h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+#visionsection{
+        background-image: url('/static/images/vision_bg.png');
+        position: relative;
+        width: 100%;
+        height: 600px; 
+        background-size: cover;
+        background-position: center;
+        margin: 80px 0
+    }
+
+
+/* iPads, Tablets */
+@media only screen and (max-width: 768px) {
+    #herosection, #visionsection {
+        width: 100%;
+        height: 300px;
+        background-position: right;
+    }
+    .overlay{
+        background-color: rgba(0, 0, 0, 0.6); 
+        color: #fff;
+    }
+}
+/* Small screens, laptops */
+@media only screen and (min-width: 769px) and (max-width:1024px) {
+    #herosection, #visionsection {
+        width: 100%;
+        height: 400px; 
+        background-position: right;
+    }
+}
+/* Desktops, large screens */
+@media only screen and (min-width: 1025px){
+    #herosection, #visionsection {
+        width: 100%;
+        height: 500px; /* Adjust height as needed */
+        background-position: right;
+    }
+}
+/* Extra large screens, TV */
+@media only screen and (min-width: 1201px) {
+    #herosection, #visionsection {
+        width: 100%;
+        height: 600px; /* Adjust height as needed */
+        background-position: right;
+    }
+}
+
+    .featured_box{
+        box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.07);
+        padding: 20px;
+        border-radius: 5;
+        min-height: 400px;
+    }
+    .shadow_box{
+        box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.07);
+        border-radius: 5px;max-width: 361px;
+    }
+    .box_content{
+        padding: 20px;
+        text-align: center;
+    }
+    
+    #benefits_section small{
+        line-height: 0.7rem;
+    }
+     
+    .text_blue{
+        color: rgba(26, 64, 136, 1);
+    }
+    

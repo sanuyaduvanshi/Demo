@@ -1,0 +1,168 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Private Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{% static '/media/css/main.css' %}"/> -->
+    <link rel="stylesheet" href="/static/css/main.css"/>
+</head>
+<body class="lato-regular">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navheader">
+        <div class="container">
+            <a class="navbar-brand" href="/CZ">
+                <img src="/static/images/Logo1.png" width="279" height="56" class="d-inline-block align-top" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="{%url 'czourbank'%}">Naše banka</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="{%url 'czinvestment'%}">Investiční výzkum</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="/CZ/#convenience_security">Ostatní produkty</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="{%url 'czfinance'%}">Financování</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item align-self-center pe-3"> Jazyk:
+                        <select id="selectlang" name="" onchange="redirect()">
+                          <option value="EN"  {% if selectedFolder == "EN" %}selected {% endif %}>EN</option>
+                          <option value="DE"  {% if selectedFolder == "DE" %}selected {% endif %}>DE</option>
+                          <option value="ES" {% if selectedFolder == "ES" %}selected {% endif %}>ES</option>
+                          <option value="CZ" {% if selectedFolder == "CZ" %}selected {% endif %}>CZ</option>
+                          <option value="TR" {% if selectedFolder == "TR" %}selected {% endif %}>TR</option>
+                        </select>
+                    </li>
+                    <li class="nav-item align-self-center">
+                        <a class="_btn primary_btn" style="min-width: 97px;" href="#">Přihlásit se</a>
+                    </li>
+                    <li class="nav-item align-self-center">
+                        <a class="_btn primary_outlined_btn" style="min-width: 158px;" href="#">Otevřít účet</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    
+
+    {% block home %}
+
+    {% endblock %}
+
+    
+<footer>
+    <div class="container">
+
+      <div class="row footer-menu d-flex justify-content-between">
+        
+        <div class="col-md-3 col-sm-12">
+            <a href="#">
+             <img src="/static/images/SPBANK VARIANT 1.png" alt="Logo" class="footer-logo">
+            </a>
+            <div class="d-flex justify-content-center">
+                <small class="align-self-center me-2">Jazyk: </small>
+                <select id="selectlangfooter" name="" onchange="redirectfooter()">
+                  <option value="EN"  {% if selectedFolder == "EN" %}selected {% endif %}>EN</option>
+                  <option value="DE"  {% if selectedFolder == "DE" %}selected {% endif %}>DE</option>
+                  <option value="ES" {% if selectedFolder == "ES" %}selected {% endif %}>ES</option>
+                  <option value="CZ" {% if selectedFolder == "CZ" %}selected {% endif %}>CZ</option>
+                  <option value="TR" {% if selectedFolder == "TR" %}selected {% endif %}>TR</option>
+                </select>
+              </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="footerheading">
+                <h6><a href="#">Rychlé odkazy</a></h6>
+            </div>
+            <ul class="submenu">
+                <li><a href="{%url 'czourbank'%}">Naše banka</a></li>
+                <li><a href="{%url 'czinvestment'%}">Investiční výzkum</a></li>
+                <li><a href="/CZ/#convenience_security">Ostatní produkty</a></li>
+                <li><a href="{%url 'czfinance'%}">Financování</a></li>
+                <li><a href="#">Kontaktujte nás</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="footerheading">
+                <h6><a href="#">Společnost</a></h6>
+            </div>
+            <ul class="submenu">
+                <li><a href="#">Obchodní podmínky</a></li>
+                <li><a href="#">Ochrana osobních údajů</a></li>
+                <li><a href="#">AML politika</a></li>
+                <li><a href="#">Nejnovější zprávy</a></li>
+            </ul>
+        </div>
+        <!-- <div class="col-md-3 col-sm-6"> 
+            <div class="footerheading">
+                <h6><a href="#">Sledujte nás</a></h6>
+            </div>
+            <ul class="social_menu">
+                <li><a href="#"><img src="/static/images/Facebook.png" alt="facebook"></a></li>
+                <li><a href="#"><img src="/static/images/Twitter.png" alt="twitter"></a></li>
+                <li><a href="#"><img src="/static/images/Instagram.png" alt="instagram"></a></li>
+                <li><a href="#"><img src="/static/images/Linkedin.png" alt="linkedin"></a></li>
+            </ul>
+        </div> -->
+      </div>
+
+      <div class="footer-disclaimer my-3">
+        <!-- <h6>Disclaimer:</h6> -->
+        <div>„Silber Bank“, „Silber Private Bank“ a logo Silber Bank jsou registrované ochranné známky Silber Private Bank IBC.</div>
+        <div>Tato webová stránka je provozována Silber Private Bank s registračním číslem HY01123056, což je autorizovaná a regulovaná mezinárodní soukromá banka s licenčním číslem B2023105, LEI 25490083JUGDGTNVAX15 a globálním identifikačním číslem zprostředkovatele (GIIN) 47BX82.99999.SL.174.
+        </div>
+        <div>Otevření jakéhokoli vkladového, spořicího nebo obchodního účtu u banky podléhá schválení, procedurám poznej svého zákazníka a AML.</div>
+        <div>Nebudeme otevírat účty pro rezidenty určitých zemí - pro omezené země se prosím podívejte na naše podmínky.</div>
+        <div>Ujistěte se, že plně rozumíte všem našim právním dokumentům, obchodním podmínkám a rizikům spojeným s různými produkty nabízenými bankou, než učiníte jakékoli rozhodnutí nebo akci. Měli byste vyhledat nezávislou radu.Ne všechny produkty jsou vhodné pro všechny druhy investorů a informace zobrazené na webu jsou obecné povahy a nezohledňují vaše osobní investiční cíle, vaše potřeby nebo finanční situaci.
+            Před jakýmkoli rozhodnutím nebo akcí se ujistěte, že plně chápete rizika spojená s nabízenými produkty. Měli byste vyhledat nezávislé poradenství.</div>
+      </div>
+
+      <div class="border_bottom">
+        © Copyright 2024 Silber Private Bank | Všechna práva vyhrazena
+      </div>
+    </div>
+  </footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
+  <!-- language change ddl -->
+  <script>
+    
+    function redirect() {
+        var dropdown = document.getElementById("selectlang");
+        var selectedFolder = dropdown.options[dropdown.selectedIndex].value;
+        sessionStorage.setItem("lang", selectedFolder);
+        var base_url = window.location.origin;
+        window.location.href = base_url + "/" + selectedFolder;
+    }
+  
+    function redirectfooter() {
+        var dropdown1 = document.getElementById("selectlangfooter");
+        var selectedFolder1 = dropdown1.options[dropdown1.selectedIndex].value;
+        sessionStorage.setItem("lang", selectedFolder1);
+        var base_url1 = window.location.origin;
+        window.location.href = base_url1 + "/" + selectedFolder1;
+    }
+  
+    </script>
+</body>
+</html>
